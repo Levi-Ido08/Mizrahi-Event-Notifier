@@ -124,14 +124,15 @@ def commit_cache_to_github():
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         
-        subprocess.run(["git", "pull", "--rebase"], check=True)
-        
         subprocess.run(["git", "add", CACHE_FILE], check=True)
         
         status_result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=True)
         if status_result.stdout.strip():
             subprocess.run(["git", "commit", "-m", "Update mizrahi events cache automatically [skip ci]"], check=True)
+            
+            subprocess.run(["git", "pull", "--rebase"], check=True)
             subprocess.run(["git", "push"], check=True)
+            
             print("הקאש עודכן והועלה בהצלחה לגיטהאב!")
         else:
             print("אין שינויים בקאש לעדכון.")
