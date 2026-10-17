@@ -55,10 +55,25 @@ def get_events_list():
 
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        event_cards = soup.select('a.eventCardLink')
+        event_cards = []
+        
+        all_h2_tags = soup.find_all('h2', class_='lineTitle')
+        target_h2 = None
+        for h2 in all_h2_tags:
+            if 'כל האירועים' in h2.get_text():
+                target_h2 = h2
+                break
+                
+        if target_h2:
+            cards_container = target_h2.find_next('div', class_='eventCards')
+            if cards_container:
+                event_cards = cards_container.select('a.eventCardLink')
 
         events = []
         for card in event_cards:
+            if 'האירוע הסתיים' in card.get_text():
+                continue
+                
             link = card.get('href', '')
             if link.startswith('/'):
                 link = 'https://www.mizrahi-tefahot.co.il' + link
@@ -76,7 +91,7 @@ def get_events_list():
             time_str = time_tag.get_text(strip=True) if time_tag else ''
 
             status_text = status_tag.get_text(strip=True) if status_tag else 'פתוח להרשמה'
-            is_closed = 'הסתיים' in status_text or 'מלאה' in status_text
+            is_closed = 'מלאה' in status_text 
 
             events.append({
                 'title': title,
@@ -108,6 +123,9 @@ def commit_cache_to_github():
     try:
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
+        
+        subprocess.run(["git", "pull", "--rebase"], check=True)
+        
         subprocess.run(["git", "add", CACHE_FILE], check=True)
         
         status_result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=True)
