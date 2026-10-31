@@ -1,14 +1,5 @@
 [
     {
-        "title": "לקום תמיד על רגל ימין",
-        "lecturer": "עמרי רוזנבליט",
-        "location": "קרית ים",
-        "time": "19/10 | 19:00",
-        "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-qiryat-yam/",
-        "status_text": "הרצאה מלאה",
-        "is_closed": true
-    },
-    {
         "title": "לקום תמיד על רגל ימין | חדרה 16.11",
         "lecturer": "עמרי רוזנבליט",
         "location": "חדרה",
@@ -27,10 +18,10 @@
         "is_closed": false
     },
     {
-        "title": "לקום תמיד על רגל ימין | פתח תקווה 11.11",
+        "title": "לקום תמיד על רגל ימין | פתח תקווה 18.11",
         "lecturer": "עמרי רוזנבליט",
         "location": "מרכז עסקים פתח תקווה",
-        "time": "11/11 | 19:00",
+        "time": "18/11 | 19:00",
         "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-asakim-petach-tikba/",
         "status_text": "פתוח להרשמה",
         "is_closed": false
