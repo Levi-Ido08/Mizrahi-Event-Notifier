@@ -2,6 +2,8 @@ name: Events Scraper
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [run-scraper-event]
 
 permissions:
   contents: write
@@ -30,3 +32,11 @@ jobs:
           IDO_APP_PASSWORD: ${{ secrets.IDO_APP_PASSWORD }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
         run: python main.py
+
+      - name: Commit and push changes if cache updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add events_cache.json
+          git diff --staged --quiet || git commit -m "Update mizrahi events cache automatically [skip ci]"
+          git push
