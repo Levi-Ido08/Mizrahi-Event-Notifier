@@ -5,7 +5,7 @@
         "location": "חדרה",
         "time": "16/11 | 19:00",
         "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-hadera-branch/",
-        "status_text": "פתוח להרשמה",
+        "status_text": "מקומות בודדים",
         "is_closed": false
     },
     {
@@ -14,8 +14,8 @@
         "location": "מרכז עסקים פתח תקווה",
         "time": "18/11 | 19:00",
         "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-asakim-petach-tikba/",
-        "status_text": "מקומות בודדים",
-        "is_closed": false
+        "status_text": "הרצאה מלאה",
+        "is_closed": true
     },
     {
         "title": "לקום תמיד על רגל ימין | קריית עסקים חולון 2.12",
