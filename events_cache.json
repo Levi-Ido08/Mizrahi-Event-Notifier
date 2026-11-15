@@ -25,23 +25,5 @@
         "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-asakim-holon/",
         "status_text": "פתוח להרשמה",
         "is_closed": false
-    },
-    {
-        "title": "סיפור על גבורה וחושך | 18.12 סינמה סיטי נתניה",
-        "lecturer": "אדוה דדון וידין גלמן",
-        "location": "",
-        "time": "",
-        "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/adva-yadin-netanya-cinema/",
-        "status_text": "פתוח להרשמה",
-        "is_closed": false
-    },
-    {
-        "title": "סיפור על גבורה וחושך | 25.12 סינמה סיטי ראשל\"צ",
-        "lecturer": "אדוה דדון וידין גלמן",
-        "location": "",
-        "time": "",
-        "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/adva-yadin-rishon-cinema/",
-        "status_text": "פתוח להרשמה",
-        "is_closed": false
     }
 ]
