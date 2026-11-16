@@ -2,11 +2,11 @@
     {
         "title": "לקום תמיד על רגל ימין | חדרה 16.11",
         "lecturer": "עמרי רוזנבליט",
-        "location": "חדרה",
-        "time": "16/11 | 19:00",
+        "location": "",
+        "time": "",
         "link": "https://www.mizrahi-tefahot.co.il/nifgashim/events/omri-rozenblit-hadera-branch/",
-        "status_text": "הרצאה מלאה",
-        "is_closed": true
+        "status_text": "פתוח להרשמה",
+        "is_closed": false
     },
     {
         "title": "לקום תמיד על רגל ימין | פתח תקווה 18.11",
